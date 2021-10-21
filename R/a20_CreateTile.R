@@ -25,7 +25,7 @@ CreateTile <- function(rownum){
     mutate(raster = xraster, id = xid)
 
 
-  dat0 <- df0 %>% select(p_bsi:p_si) %>%
+  dat0 <- df0 %>% select(p_ndvi:p_ndbi) %>%
     summarise(across(where(is.numeric)
                      , tile_stat))  %>%
     rename_all(funs(str_replace_all(., "p_", "t_"))) %>%

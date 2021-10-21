@@ -7,7 +7,7 @@ ProcessAnnotationsData <- function(mydata){
   dato <- mydata[[3]][[2]]$transactions$transaction
 
   meta <<- dato$metadata
-  annotationrasters <- dato$rasters
+  annotationrasters <<- dato$rasters
   a0 <- dato$annotations
 
   edf <- data.frame()
