@@ -1,5 +1,12 @@
 
 InputBlockChain <- function(){
+  select <- dplyr::select
+  mutate <- dplyr::mutate
+  rename <- dplyr::rename
+  group_by <- dplyr::group_by
+  distinct <- dplyr::distinct
+  `%>%` <- magrittr::`%>%`
+
 xmin <- annotation_extent[1]
 xmax <- annotation_extent[2]
 ymin <- annotation_extent[3]
