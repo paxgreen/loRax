@@ -1,4 +1,17 @@
-CreateBlockChain <- function(rasters, metadata, annotations){
+CreateBlockChain <- function(annotation_extent, rasters, metadata, annotations){
+
+CreateBlock <- function (annotation_extent, rasters, metadata, annotations )
+{
+txn <-  list('transaction'= list(
+'annotation_extent' = annotation_extent
+,'rasters' = rasters
+,'metadata' = metadata
+, 'annotations' = annotations
+))
+
+blockchain$currentTransactions <<- append(blockchain$currentTransactions,txn)
+return(blockchain$currentTransactions)
+}
 
   block <- list()
   currentTransactions <- list()
@@ -13,7 +26,7 @@ CreateBlockChain <- function(rasters, metadata, annotations){
   ##############################################
   ##############################################
 
-  CreateBlock(rasters, metadata, annotations)
+  CreateBlock(annotation_extent, rasters, metadata, annotations)
   lastblock <- GetLastBlock(blockchain)
   lastProof = lastblock$proof
   proof = proofOfWork(lastProof)
