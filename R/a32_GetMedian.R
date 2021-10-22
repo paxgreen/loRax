@@ -16,8 +16,8 @@ GetMedian <- function(rownum3){
 
 
   g0 <- m1[rownum3,]
-  yrow0 <- g0[1,8]
-  xcol0 <- g0[1,9]
+  yrow0 <- g0[1,13]
+  xcol0 <- g0[1,14]
   m2 <- m1 %>%
     filter(
       xcol == xcol0 & yrow == yrow0 - 1 |
