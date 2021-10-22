@@ -5,6 +5,7 @@ separate <- tidyr::separate
 mutate <- dplyr::mutate
 select <- dplyr::select
 distinct <- dplyr::distinct
+nest <- tidyr::nest
 
 
 

@@ -1,5 +1,11 @@
 CreateBlockChain <- function(annotation_extent, rasters, metadata, annotations){
 
+
+  block <- list()
+  currentTransactions <- list()
+  blockchain <- list(block,currentTransactions)
+
+
 CreateBlock <- function (annotation_extent, rasters, metadata, annotations )
 {
 txn <-  list('transaction'= list(
@@ -12,10 +18,6 @@ txn <-  list('transaction'= list(
 blockchain$currentTransactions <<- append(blockchain$currentTransactions,txn)
 return(blockchain$currentTransactions)
 }
-
-  block <- list()
-  currentTransactions <- list()
-  blockchain <- list(block,currentTransactions)
 
   #################################
   ## GENESIS BLOCK

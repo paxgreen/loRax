@@ -17,7 +17,7 @@ firstname = 'firstname'
 lastname = 'lastname'
 email = 'email'
 created = Sys.time()#########
-metadata <<- suppressWarnings(data.frame(country, region,xmin, xmax, ymin, ymax, firstname, lastname, email, created) %>%
+meta <<- suppressWarnings(data.frame(country, region,xmin, xmax, ymin, ymax, firstname, lastname, email, created) %>%
 select(-firstname, -lastname) %>%
 tidyr::gather() %>%
 mutate(value = ifelse(key == 'created', as.character(Sys.time()), value)) %>%
