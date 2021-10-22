@@ -3,6 +3,7 @@ ProcessAnnotationsData <- function(mydata){
 
   mutate <- dplyr::mutate
   row_number <- dplyr::row_number
+    `%>%` <- magrittr::`%>%`
 
   dato <- mydata[[3]][[2]]$transactions$transaction
 

@@ -13,6 +13,8 @@ RunRandomForest <- function(annotations){
   doParallel::registerDoParallel(cl)
   foreach <- foreach::foreach
   randomForest <- randomForest::randomForest
+  select <- dplyr::select
+
 
   `%>%` <- magrittr::`%>%`
 
@@ -76,6 +78,7 @@ RunRandomForest <- function(annotations){
   doParallel::registerDoParallel(cl)
   foreach <- foreach::foreach
   randomForest <- randomForest::randomForest
+  cores <- detectCores()
   #########
   ###############################################
   mod <- foreach(ntree=rep(600, cores)
