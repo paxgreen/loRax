@@ -47,6 +47,6 @@ CreateCluster <- function(numrow){
     left_join(res100, by = c('rownum2' = 'rownum'))
 
   n <-  dat2 %>% group_by(raster, id,) %>% nest() %>% mutate(numrow = numrow)
-  rm(m1, d1, dat0, dat1, dat2, m2)
+  rm(d1, dat0, dat1, dat2)
   return(n)
 }

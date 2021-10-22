@@ -16,8 +16,8 @@ GetMedian <- function(rownum3){
 
 
   g0 <- m1[rownum3,]
-  yrow0 <- g0[1,13]
-  xcol0 <- g0[1,14]
+  yrow0 <- g0[1,12]
+  xcol0 <- g0[1,13]
   m2 <- m1 %>%
     filter(
       xcol == xcol0 & yrow == yrow0 - 1 |
@@ -34,6 +34,7 @@ GetMedian <- function(rownum3){
     summarise(across(where(is.numeric), tile_stat)) %>%
     rename_all(funs(str_replace_all(., "p_", "c_"))) %>%
     mutate(rownum = rownum3)
-  rm(g0)
+
   return(m2)
+    rm(g0, m2)
 }
