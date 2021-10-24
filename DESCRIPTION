@@ -9,3 +9,25 @@ Description: More about what it does (maybe more than one line)
 License: What license is it under?
 Encoding: UTF-8
 LazyData: true
+Imports:
+        dplyr,
+        tidyr,
+        stats,
+        raster,
+        magrittr,
+        stringr,
+        LidarProcessoR,
+        furrr,
+        parallel,
+        foreach,
+        randomForest,
+        doParallel,
+        ggplot2,
+        RStoolbox,
+        shiny,
+        shinyalert,
+        shinyjs,
+        plotly
+        
+        
+        
